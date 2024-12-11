@@ -103,7 +103,7 @@ class Article:
     @magazine.setter
     def magazine(self, new_magazine):
         self._magazine = new_magazine
-author1 = Author("John Doe")
+author1 = Author("lola dandeline")
 magazine1 = Magazine("Tech Today", "Technology")
 magazine2 = Magazine("Health Weekly", "Health")
 article1 = author1.add_article(magazine1, "The Future of AI")
