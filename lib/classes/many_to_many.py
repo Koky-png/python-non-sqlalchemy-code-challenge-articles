@@ -103,6 +103,28 @@ class Article:
     @magazine.setter
     def magazine(self, new_magazine):
         self._magazine = new_magazine
+author1 = Author("John Doe")
+magazine1 = Magazine("Tech Today", "Technology")
+magazine2 = Magazine("Health Weekly", "Health")
+article1 = author1.add_article(magazine1, "The Future of AI")
+article2 = author1.add_article(magazine1, "Quantum Computing Basics")
+article3 = author1.add_article(magazine2, "New Health Trends")
+print(f"Articles by {author1.name}:")
+for article in author1.articles():
+    print(f"- {article.title} in {article.magazine.name}")
+print(f"\nTopic Areas by {author1.name}: {author1.topic_areas()}")
+print(f"\nContributors to {magazine1.name}:")
+for contributor in magazine1.contributors():
+    print(f"- {contributor.name}")
+print(f"\nArticle titles in {magazine1.name}:")
+for title in magazine1.article_titles():
+    print(f"- {title}")
+print(f"\nContributing authors to {magazine1.name} (more than 2 articles):")
+for author in magazine1.contributing_authors():
+    print(f"- {author.name}")
+top_publisher = Magazine.top_publisher()
+print(f"\nTop Publisher: {top_publisher.name} with {len(top_publisher.articles())} articles")
+
 
 
 
